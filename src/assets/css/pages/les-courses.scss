@@ -1,0 +1,120 @@
+#commentaires {
+    position: relative;
+    #bulle {
+        width: 100%;
+        margin-left: 5%;
+        margin-top: 30px;
+        @media (max-width: $mobile-breakpoint) {
+            display: none;
+        }
+    }
+    #row-1 {
+        position: absolute;
+        left: 0px;
+        top: 200px;
+        #inscription {
+            position: absolute;
+            right: -100px;
+            top: -170px;
+            @media (max-width: 1200px){
+                top: -120px;
+            }
+            @media (max-width: 992px){
+                top: -70px;
+            }
+            @media (max-width: $mobile-breakpoint){
+                position: relative;
+                right: 0px;
+                top: 0px;
+                margin: auto;
+                margin-bottom: 30px;
+            }
+        }
+        @media (max-width: 1200px){
+            top: 130px;
+        }
+        @media (max-width: 992px){
+            top: 70px;
+            p.blue{
+                font-size: 18px;
+                line-height: 20px;
+            }
+        }
+        @media (max-width: $mobile-breakpoint) {
+            position: relative;
+            left: 0px;
+            top: 0px;
+            p {
+                color: white !important;
+            }
+        }
+    }
+    #row-2 {
+        #formulaire{
+            position: absolute;
+            right: -100px;
+            top: -170px;
+            line-height: 30px;
+            display: grid;
+            place-items: center;
+            width: 192px;
+            height: 144px;
+            background-size: 192px 144px;
+            animation-delay: 0.7s;
+        }
+        position: absolute;
+        left: -80px;
+        top: 470px;
+        @media (max-width: 1200px){
+            top: 390px;
+        }
+        @media (max-width: 992px){
+        top: 270px;
+            p.blue{
+                font-size: 18px;
+                line-height: 20px;
+            }
+        }
+        @media (max-width: $mobile-breakpoint) {
+            position: relative;
+            left: 0px;
+            top: 0px;
+            p {
+                color: white !important;
+            }
+        }
+    }
+   /*  #point-1 {
+        position: absolute;
+        left: 15vw;
+        top: 350px;
+        z-index: -1;
+        @media (max-width: $mobile-breakpoint) {
+            display: none;
+        }
+    }
+    #point-2 {
+        position: absolute;
+        right: 5vw;
+        top: 150px;
+        z-index: -1;
+        @media (max-width: $mobile-breakpoint) {
+            display: none;
+        }
+    } */
+}
+
+.center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    a {
+        margin: 0px 15px;
+    }
+    @media (max-width: $mobile-breakpoint) {
+        flex-direction: column;
+        a {
+            margin: 15px auto;
+        }
+    }
+}

@@ -1,0 +1,56 @@
+.card {
+    background: $white;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 100px 100px 0px $theme-blue-dark;
+    color: $theme-blue;
+    .card-body {
+        padding: 30px;
+        border: none;
+    }
+    .card-footer {
+        padding: 30px;
+        background: $theme-green;
+        border: none;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+    &.cloud {
+        position: relative;
+        margin-top: 100px;
+        &::after {
+            position: absolute;
+            left: -150px;
+            top: -80px;
+            content: "";
+            width: 400px;
+            height: 400px;
+            background: url("../img/cloud.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            z-index: -1;
+            animation: 1.5s infinite alternate hearthbeat;
+        }
+        &::before {
+            position: absolute;
+            left: -25px;
+            bottom: -25px;
+            content: "";
+            background: url("../img/Klapoti.svg");
+            transform: rotate(180deg);
+            width: 50px;
+            height: 50px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+@keyframes hearthbeat {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.1)
+    }
+}

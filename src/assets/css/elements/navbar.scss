@@ -1,0 +1,130 @@
+#navbar-container {
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    background: $theme-blue;
+    z-index: 999999;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+    #navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px 0px;
+        flex-wrap: wrap;
+        #navbar-toggle {
+            display: none;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid $white;
+            height: fit-content;
+            margin-top: 30px;
+            margin-left: auto;
+            margin-right: 30px;
+            div {
+                height: 2px;
+                width: 30px;
+                background: $white;
+                margin: 5px;
+            }
+            @media (max-width: $mobile-breakpoint) {
+                display: block;
+            }
+        }
+        #navbar-logo {
+            width: 200px;
+            img {
+                height: 100px;
+            }
+            @media (max-width: $mobile-breakpoint){
+                transform: translateY(15px);
+            }
+        }
+        #navbar-nav {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            @media (max-width: $mobile-breakpoint) {
+                width: 100%;
+            }
+            #navbar-links {
+                position: relative;
+                background: $theme-blue;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                border-radius: 30px;
+                box-shadow: 0px 4px 4px rgba(65, 65, 65, 0.25),
+                    inset 0px 1px 7px rgba(190, 198, 249, 0.25);
+                a {
+                    color: white;
+                    font-size: 22px;
+                    margin: 0px 15px;
+                    padding: 8px 18px;
+                    display: block;
+                    transition: 0.3s ease-out;
+                    &:hover{
+                        color: $theme-green;
+                        text-decoration: none;
+                    }
+                }
+                &::after {
+                    position: absolute;
+                    right: -22px;
+                    top: -18px;
+                    height: 50px;
+                    width: 50px;
+                    content: "";
+                    background: url("../img/Klapoti.svg");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+                @media (max-width: $mobile-breakpoint) {
+                    flex-direction: column;
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+        #navbar-socials-sm{
+            display: none;
+            @media (max-width: $mobile-breakpoint){
+                display: block;
+            }
+            i {
+                font-size: 54px;
+                color: white;
+                margin-top: 27px;
+            }
+        }
+        #navbar-socials {
+            text-align: right;
+            width: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            i {
+                font-size: 50px;
+                color: white;
+            }
+            @media (max-width: $mobile-breakpoint) {
+                display: none;
+                width: 100%;
+                text-align: center;
+            }
+        }
+        @media (max-width: $mobile-breakpoint) {
+            &.open {
+                #navbar-links {
+                    height: 147px;
+                }
+            }
+            #navbar-links {
+                height: 0px;
+                overflow: hidden;
+                transition: 0.3s ease-out;
+                margin-bottom: 15px;
+            }
+        }
+    }
+}

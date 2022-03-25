@@ -1,0 +1,26 @@
+footer#footer{
+    background: url("../img/footer.svg");
+    background-size: 80% auto;
+    background-repeat: no-repeat;
+    background-position: bottom 25% center;
+    padding: 100px 0px 200px 0px;
+    .footer_link{
+        transition: 0.3s ease;
+        font-size: 25px;
+        color: $white;
+        text-decoration: none;
+        &:hover{
+            color: $theme-green;
+        }
+    }
+    @media (max-width: $mobile-breakpoint){
+        padding: 25px;
+        padding-bottom: 50px;
+        background-position: bottom center;
+        text-align: center;
+        .bouton-bulle{
+            margin: auto;
+            margin-top: 5px !important
+        }
+    }
+}

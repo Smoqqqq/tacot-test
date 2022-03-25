@@ -1,0 +1,74 @@
+.bouton-bulle{
+    width: 152px;
+    height: 104px;
+    padding-left: 10px;
+    display: block;
+    text-align: center;
+    line-height: 94px;
+    background: url("../img/bouton_bulle_blanche.png");
+    background-size: 152px 104px;
+    color: $theme-green;
+    font-size: 20px;
+    font-weight: 600;
+    animation: 2s infinite alternate slideUp;
+    transition: 0.3s ease;
+    &:hover{
+        text-decoration: none;
+        color: $theme-green;
+        filter: brightness(1.05);
+    }
+}
+
+.bouton-bulle-verte{
+    padding-left: 10px;
+    width: 152px;
+    height: 104px;
+    display: block;
+    text-align: center;
+    line-height: 94px;
+    background: url("../img/bouton_bulle_verte.png");
+    background-size: 152px 104px;
+    color: $white;
+    font-size: 20px;
+    font-weight: 600;
+    animation: 2s infinite alternate slideUp;
+    transition: 0.3s ease;
+    &:hover{
+        text-decoration: none;
+        color: $white;
+        filter: brightness(1.1);
+    }
+}
+
+@keyframes slideUp {
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(-10px);
+    }
+}
+
+.text-center{
+    a{
+        margin: auto;
+    }
+}
+
+.bouton-blanc{
+    display: block;
+    padding: 15px 30px;
+    border-radius: 30px;
+    background: $white;
+    color: $theme-green;
+    text-align: center;
+    font-weight: 600;
+    width: fit-content;
+    transition: 0.3s ease;
+    text-decoration: none;
+    &:hover{
+        background: $theme-green;
+        color: $white;
+        text-decoration: none;
+    }
+}
